@@ -1,26 +1,106 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f8f8f8;
-    color: #333;
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background: linear-gradient(135deg, #1e293b, #64748b);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    width: 100%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    background: url('https://steelsupplements.com/cdn/shop/articles/healthy_food-min_1000x.jpg?v=1662651102') no-repeat center center/cover;
+    position: relative;
+    padding: 20px;
   }
   
-  .container {
-    max-width: 500px;
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .logo img {
+    width: 200px;
+    height: auto;
+    /* margin-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */
   }
   
   h1 {
-    font-size: 3em;
-    margin-bottom: 20px;
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #34d399; /* Green for fitness and health */
+    font-family: sans-serif;
   }
   
-  p {
+  .tagline {
+    font-size: 1.5em;
+    font-style: italic;
+    margin-bottom: 20px;
+    color: #a5f3fc; /* Light blue for freshness */
+  }
+  
+  .message {
     font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+  }
+  
+  /* button {
+    padding: 10px 20px;
+    background-color: #ef4444;
+    color: #fff;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #dc2626;
+  }
+   */
+  /* Footer */
+  footer {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0.9em;
+    color: #94a3b8;
   }
   
